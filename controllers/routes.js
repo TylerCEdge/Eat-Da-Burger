@@ -1,5 +1,5 @@
 var express = require("express");
-var burger = require('../models/burgers.js');
+var burger = require("../models/burgers.js");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
@@ -18,7 +18,7 @@ router.get("/", function (req, res) {
 router.put("/burgers/update", function (req, res) {
   burger.update(req.body.burger_id, function (result) {
     console.log(result);
-    res.redirect('/');
+    res.redirect("/");
   });
 });
 
